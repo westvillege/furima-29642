@@ -27,17 +27,11 @@ Things you may want to cover:
 
 ## users テーブル
  
-| Column             | Type   | Options      |
-| -------------------| ------ | ------------ |
-| name               | text   | null: false  |
-| email              | string | null: false  |
-|                    |        | unique: true |
-| encrypted_password | string | null: false  |
-| family_name        | text   | null: false  |
-| first_name         | text   | null: false  |
-| family_name_furi   | text   | null: false  |
-| first_name_furi    | text   | null: false  |
-| birthday           | date   | null: false  |
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | text   | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
 ### Association
 
@@ -45,22 +39,18 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | -----------| ------------------------------ |
-| name         | text       | null: false                    |
-| description  | text       | null: false                    |
-| price        | integer    | null: false                    |
-| categories   | references | null: false, foreign_key: true |
-| user_id      | references | null: false, foreign_key: true |
-| condition_id | integer    | null: false                    |
-| fee_id       | integer    | null: false                    |
-| area_id      | integer    | null: false                    |
-| time_id      | integer    | null: false                    |
+| Column     | Type       | Options                        |
+| ---------- | -----------| ------------------------------ |
+| name       | text       | null: false                    |
+| price      | integer    | null: false
+| user       | references | null: false, foreign_key: true |
+| categories | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :category
+- has_many :photos
 - has_one :record
 
 ## categories テーブル
@@ -73,11 +63,21 @@ Things you may want to cover:
 
 - has_many :items
 
+## photos テーブル
+
+| Column | Type       | Options                        |
+| ------ | -----------| ------------------------------ |
+| items  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :item
+
  ## records テーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| items_id  | references | null: false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| items  | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -86,9 +86,9 @@ Things you may want to cover:
  
  ## destinations テーブル
 
-| Column     | Type       | Options                        |
-| ---------- | -----------| ------------------------------ |
-| records_id | references | null: false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | -----------| ------------------------------ |
+| items  | references | null: false, foreign_key: true |
 
 ### Association
 
