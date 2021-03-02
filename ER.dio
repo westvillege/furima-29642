@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-03-02T11:46:47.294Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="V0h96h7Kwv6CbD3OFDRD" version="14.2.4" type="embed">
+<mxfile host="65bd71144e" modified="2021-03-02T12:27:29.111Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="bqajIxjrHX_t7F5BruIH" version="14.2.4" type="embed">
     <diagram id="ndYAzAPY2-if833t0blC" name="ページ1">
-        <mxGraphModel dx="768" dy="569" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="388" dy="569" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="GGizJYIZAuTWseqo5O5L-0"/>
                 <mxCell id="GGizJYIZAuTWseqo5O5L-1" parent="GGizJYIZAuTWseqo5O5L-0"/>
@@ -62,7 +62,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-27" value="destinations" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;spacingLeft=10;" vertex="1" parent="GGizJYIZAuTWseqo5O5L-1">
-                    <mxGeometry x="80" y="80" width="160" height="370" as="geometry"/>
+                    <mxGeometry x="80" y="80" width="160" height="400" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-30" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-27">
                     <mxGeometry y="30" width="160" height="30" as="geometry"/>
@@ -97,7 +97,7 @@
                 <mxCell id="5_7F9kkWYthdjwExuxbA-40" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-27">
                     <mxGeometry y="180" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="5_7F9kkWYthdjwExuxbA-41" value="prefecture" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-40">
+                <mxCell id="5_7F9kkWYthdjwExuxbA-41" value="prefecture_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-40">
                     <mxGeometry width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-116" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-27">
@@ -128,6 +128,12 @@
                     <mxGeometry y="330" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-43" value="phone" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-42">
+                    <mxGeometry width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5_7F9kkWYthdjwExuxbA-118" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-27">
+                    <mxGeometry y="360" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5_7F9kkWYthdjwExuxbA-119" value="order" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-118">
                     <mxGeometry width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-46" value="items" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="GGizJYIZAuTWseqo5O5L-1">
@@ -184,7 +190,7 @@
                 <mxCell id="5_7F9kkWYthdjwExuxbA-97" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-46">
                     <mxGeometry y="269" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="5_7F9kkWYthdjwExuxbA-98" value="area_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-97">
+                <mxCell id="5_7F9kkWYthdjwExuxbA-98" value="prefecture_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;spacingLeft=10;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-97">
                     <mxGeometry width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="5_7F9kkWYthdjwExuxbA-63" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5_7F9kkWYthdjwExuxbA-46">
