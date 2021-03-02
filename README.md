@@ -45,17 +45,17 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | -----------| ------------------------------ |
-| genre        | string     | null: false                    |
-| description  | text       | null: false                    |
-| price        | integer    | null: false                    |
-| user         | references | null: false, foreign_key: true |
-| category_id  | integer    | null: false, foreign_key: true |
-| condition_id | integer    | null: false                    |
-| fee_id       | integer    | null: false                    |
-| area_id      | integer    | null: false                    |
-| time_id      | integer    | null: false                    |
+| Column        | Type       | Options                        |
+| ------------- | -----------| ------------------------------ |
+| genre         | string     | null: false                    |
+| description   | text       | null: false                    |
+| price         | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
+| category_id   | integer    | null: false, foreign_key: true |
+| condition_id  | integer    | null: false                    |
+| fee_id        | integer    | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| time_id       | integer    | null: false                    |
 
 ### Association
 
@@ -83,13 +83,14 @@ Things you may want to cover:
 | first_name       | string     | null: false                    |
 | family_name_furi | string     | null: false                    |
 | first_name_furi  | string     | null: false                    |
-| postal_code      | integer    | null: false                    |
-| prefecture       | string     | null: false                    |
+| postal_code      | string     | null: false                    |
+| prefecture_id    | integer    | null: false                    |
 | city             | string     | null: false                    |
 | ad_detail        | string     | null: false                    |
-| building         | string     | null: false                    |
-| room_num         | string     | null: false                    |
-| phone            | string     |                                |
+| building         | string     |                                |
+| room_num         | string     |                                |
+| phone            | string     | null: false                    |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
 
