@@ -27,31 +27,32 @@ Things you may want to cover:
 
 ## users テーブル
  
-| Column             | Type   | Options      |
-| -------------------| ------ | ------------ |
-| name               | text   | null: false  |
-| email              | string | null: false  |
-|                    |        | unique: true |
-| encrypted_password | string | null: false  |
-| family_name        | text   | null: false  |
-| first_name         | text   | null: false  |
-| family_name_furi   | text   | null: false  |
-| first_name_furi    | text   | null: false  |
-| birthday           | date   | null: false  |
+| Column             | Type   | Options                  |
+| -------------------| ------ | ------------------------ |
+| name               | string | null: false              |
+| email              | string | null: false,unique: true |
+| encrypted_password | string | null: false              |
+| family_name        | string | null: false              |
+| first_name         | string | null: false              |
+| family_name_furi   | string | null: false              |
+| first_name_furi    | string | null: false              |
+| birthday           | date   | null: false              |
 
 ### Association
 
 - has_many :items
+- has_many :orders
+- has_one :destination
 
 ## items テーブル
 
 | Column       | Type       | Options                        |
 | ------------ | -----------| ------------------------------ |
-| name         | text       | null: false                    |
+| name         | string     | null: false                    |
 | description  | text       | null: false                    |
 | price        | integer    | null: false                    |
-| categories   | references | null: false, foreign_key: true |
-| user_id      | references | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
+| category_id  | references | null: false, foreign_key: true |
 | condition_id | integer    | null: false                    |
 | fee_id       | integer    | null: false                    |
 | area_id      | integer    | null: false                    |
@@ -65,33 +66,41 @@ Things you may want to cover:
 
 ## categories テーブル
  
-| Column     | Type | Options     |
-| ---------- | ---- | ----------- |
-| name       | text | null: false |
+| Column     | Type   | Options     |
+| ---------- | ----   | ----------- |
+| name       | string | null: false |
 
 ### Association
 
 - has_many :items
 
- ## records テーブル
+## orders テーブル
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | items_id  | references | null: false, foreign_key: true |
+| users_id  | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :item
-- has_one :destination
+- belongs_to :user
  
- ## destinations テーブル
+## destinations テーブル
 
-| Column     | Type       | Options                        |
-| ---------- | -----------| ------------------------------ |
-| records_id | references | null: false, foreign_key: true |
+| Column           | Type       | Options                        |
+| ---------------- | -----------| ------------------------------ |
+| users_id         | references | null: false, foreign_key: true |
+| family_name      | string     | null: false                    |
+| first_name       | string     | null: false                    |
+| family_name_furi | string     | null: false                    |
+| first_name_furi  | string     | null: false                    |
+| postal_code      |integer     | null: false                    |
+| address          | string     | null: false                    |
+| phone            | string     |                                |
 
 ### Association
 
-- belongs_to :record
+- belongs_to :user
 
 
