@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :orders
        
   with_options presence: true do
-    validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "全角で入力してください"} 
+    validates :name 
     validates :email, unique: false, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
     validates :password, length: { minimum: 7 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
     validates :family_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "全角で入力してください"}
