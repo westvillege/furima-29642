@@ -47,7 +47,7 @@ Things you may want to cover:
 
 | Column        | Type       | Options                        |
 | ------------- | -----------| ------------------------------ |
-| product       | string     | null: false                    |
+| genre         | string     | null: false                    |
 | description   | text       | null: false                    |
 | price         | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
