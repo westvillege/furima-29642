@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   has_many :conditions
   has_many :fees
   has_many :prefectures
-  has_many :times
+  has_many :delivery
 
   has_one_attached :image
 
@@ -17,7 +17,7 @@ class Item < ApplicationRecord
     validates :condition_id, numericality: { other_than: 1 } 
     validates :fee_id, numericality: { other_than: 1 } 
     validates :prefecture_id, numericality: { other_than: 1 } 
-    validates :time_id, numericality: { other_than: 1 } 
+    validates :delivery_id, numericality: { other_than: 1 } 
   end
 
 end

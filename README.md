@@ -55,7 +55,7 @@ Things you may want to cover:
 | condition_id  | integer    | null: false                    |
 | fee_id        | integer    | null: false                    |
 | prefecture_id | integer    | null: false                    |
-| time_id       | integer    | null: false                    |
+| delivery_id   | integer    | null: false                    |
 
 ### Association
 
