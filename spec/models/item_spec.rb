@@ -57,22 +57,22 @@ RSpec.describe Item, type: :model do
       it 'priceが299円以下では登録できない' do
         @item.price = 299
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
+        expect(@item.errors.full_messages).to include('Price is not included in the list')
       end
       it 'priceが10000000円以上では登録できない' do
-        @item.price = 10000000
+        @item.price = 10_000_000
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
+        expect(@item.errors.full_messages).to include('Price is not included in the list')
       end
       it 'priceが半角数字でなければ登録できない' do
         @item.price = 'asｱｱ'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
+        expect(@item.errors.full_messages).to include('Price is not included in the list')
       end
       it 'priceが半角数字でなければ登録できない' do
         @item.price = '１２３４'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
+        expect(@item.errors.full_messages).to include('Price is not included in the list')
       end
       it 'imageが空では登録できない' do
         @item.image = nil
