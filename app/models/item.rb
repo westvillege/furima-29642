@@ -13,7 +13,6 @@ class Item < ApplicationRecord
     validates :product, length: { maximum: 40 }
     validates :description, length: { maximum: 1000 }
     validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
-    validates :user
     validates :image
   end
 
