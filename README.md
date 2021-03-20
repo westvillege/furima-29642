@@ -47,7 +47,7 @@ Things you may want to cover:
 
 | Column        | Type       | Options                        |
 | ------------- | -----------| ------------------------------ |
-| genre         | string     | null: false                    |
+| product       | string     | null: false                    |
 | description   | text       | null: false                    |
 | price         | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
@@ -55,7 +55,7 @@ Things you may want to cover:
 | condition_id  | integer    | null: false                    |
 | fee_id        | integer    | null: false                    |
 | prefecture_id | integer    | null: false                    |
-| time_id       | integer    | null: false                    |
+| delivery_id   | integer    | null: false                    |
 
 ### Association
 
