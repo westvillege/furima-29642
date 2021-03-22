@@ -7,6 +7,8 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :delivery
 
+#  has_one :order
+
   has_one_attached :image
 
   with_options presence: true do
