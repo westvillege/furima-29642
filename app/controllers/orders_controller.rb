@@ -1,4 +1,4 @@
-#class OrdersController < ApplicationController
+# class OrdersController < ApplicationController
 #  def index
 #    @order = Order.create(order_params)
 #  end
@@ -8,4 +8,4 @@
 #  def order_params
 #    params.require(:order).permit(:item)
 #  end
-#end
+# end
