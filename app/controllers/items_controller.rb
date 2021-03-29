@@ -32,11 +32,11 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
-  
-    def destroy
-      item = Item.find(params[:id])
-      item.destroy
-    end
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
   end
 
   private
