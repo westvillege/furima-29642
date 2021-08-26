@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
     @order_destination = OrderDestination.new(order_params) 
-    binding.pry
     if @order_destination.valid?
         pay_item
        @order_destination.save
