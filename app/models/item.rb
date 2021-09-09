@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   has_one :order
 
   has_one_attached :image
-  
+
   with_options presence: true do
     validates :product, length: { maximum: 40 }
     validates :description, length: { maximum: 1000 }

@@ -6,6 +6,6 @@ FactoryBot.define do
     ad_detail { '1-1' }
     building { '' }
     phone { '11111111111' }
-    token { 'token' }  
+    token { 'token' }
   end
 end
