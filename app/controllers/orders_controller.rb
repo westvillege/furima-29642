@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_item, except: [:index, :create]
+
 
   def index
     @order_destination = OrderDestination.new
-    @item = Item.find(params[:item_id])
     redirect_to root_path if (current_user.id == @item.user_id) || @item.order.present?
   end
 
@@ -11,7 +12,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @item = Item.find(params[:item_id])
     @order_destination = OrderDestination.new(order_params)
     if @order_destination.valid?
       pay_item
@@ -23,6 +23,10 @@ class OrdersController < ApplicationController
   end
 
   private
+
+  def set_item
+    @item = Item.find(params:item_id])
+  end
 
   def order_params
     params.require(:order_destination).permit(:postal_code, :prefecture, :city, :ad_detail, :building, :phone).merge(
