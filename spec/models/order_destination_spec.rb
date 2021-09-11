@@ -24,9 +24,9 @@ RSpec.describe OrderDestination, type: :model do
         expect(@order_destination.errors.full_messages).to include('Postal code is invalid')
       end
       it 'prefectureを選択していないと保存できないこと' do
-        @order_destination.prefecture = 0
+        @order_destination.prefecture = nil
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include('Prefecture must be other than 0')
+        expect(@order_destination.errors.full_messages).to include("Prefecture can't be blank")
       end
       it 'cityは空だと保存できないこと' do
         @order_destination.city = nil
@@ -49,6 +49,16 @@ RSpec.describe OrderDestination, type: :model do
       end
       it 'phoneはハイフン不要で、11桁以内でないと保存できないこと' do
         @order_destination.phone = '0123456789123'
+        @order_destination.valid?
+        expect(@order_destination.errors.full_messages).to include('Phone is invalid')
+      end
+      it 'phoneはハイフン不要で、9桁以下では保存できないこと' do
+        @order_destination.phone = '123456789'
+        @order_destination.valid?
+        expect(@order_destination.errors.full_messages).to include('Phone is invalid')
+      end
+      it 'phoneは半角数字以外が含まれている場合は購入できない' do
+        @order_destination.phone = '0123456789あ'
         @order_destination.valid?
         expect(@order_destination.errors.full_messages).to include('Phone is invalid')
       end
