@@ -38,10 +38,6 @@ RSpec.describe OrderDestination, type: :model do
         @order_destination.valid?
         expect(@order_destination.errors.full_messages).to include("Ad detail can't be blank")
       end
-      it 'buildingは空でも保存できること' do
-        @order_destination.building = nil
-        expect(@order_destination).to be_valid
-      end
       it 'phoneが空だと保存できないこと' do
         @order_destination.phone = nil
         @order_destination.valid?

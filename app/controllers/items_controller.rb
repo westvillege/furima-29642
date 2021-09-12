@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('created_at DESC')
+    redirect_to root_path if (current_user.id == @item.user_id) || @item.order.present?
   end
 
   def new
