@@ -5,7 +5,6 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('created_at DESC')
-    redirect_to root_path if (current_user.id == @item.user_id) || @item.order.present?
   end
 
   def new
@@ -25,10 +24,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    if current_user.id == @item.user_id || @item.order.present?
+      redirect_to root_path
+    end
   end
 
   def update
-    if @item.update(item_params)
+    if current_user.id == @item.user_id || @item.order.present?
+      redirect_to root_path
+    elsif @item.update(item_params)
       redirect_to item_path(@item.id)
     else
       render :edit
