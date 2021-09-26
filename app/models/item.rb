@@ -11,6 +11,8 @@ class Item < ApplicationRecord
 
   has_one_attached :image
 
+  has_many :comments 
+
   with_options presence: true do
     validates :product, length: { maximum: 40 }
     validates :description, length: { maximum: 1000 }
