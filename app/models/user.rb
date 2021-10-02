@@ -6,7 +6,8 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
   has_many :comments
-
+  has_one :address
+  
   with_options presence: true do
     validates :name
     validates :email
